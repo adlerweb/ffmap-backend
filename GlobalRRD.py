@@ -5,9 +5,9 @@ from RRD import RRD, DS, RRA
 class GlobalRRD(RRD):
     ds_list = [
         # Number of nodes available
-        DS('nodes', 'GAUGE', 120, 0, float('NaN')),
+        DS('nodes', 'GAUGE', 600, 0, float('NaN')),
         # Number of client available
-        DS('clients', 'GAUGE', 120, 0, float('NaN')),
+        DS('clients', 'GAUGE', 600, 0, float('NaN')),
     ]
     rra_list = [
         RRA('AVERAGE', 0.5, 1, 120),    #  2 hours of 1 minute samples
