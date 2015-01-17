@@ -5,8 +5,8 @@ from RRD import RRD, DS, RRA
 
 class NodeRRD(RRD):
     ds_list = [
-        DS('upstate', 'GAUGE', 120, 0, 1),
-        DS('clients', 'GAUGE', 120, 0, float('NaN')),
+        DS('upstate', 'GAUGE', 600, 0, 1),
+        DS('clients', 'GAUGE', 600, 0, float('NaN')),
     ]
     rra_list = [
         RRA('AVERAGE', 0.5, 1, 120),    #  2 hours of  1 minute samples
